@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { StudentInterface } from "./components/Student";
+import Students from "./components/Students";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Students data={DATA} />
     </div>
   );
 }
 
 export default App;
+
+const DATA: StudentInterface[] = [
+  {
+    name: "Ashif",
+    age: 21,
+    isPassed: false,
+    marks: [12.2, 42654, 5653, 53],
+    phone: 2534234523,
+  },
+  { name: "Mejo", age: 21, isPassed: true, marks: [143.2, 4624, 5563, 53] },
+  { name: "Shiju", age: 21, isPassed: true, marks: [12.2, 424, 53, 5653] },
+];
